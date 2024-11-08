@@ -6,7 +6,7 @@ import org.example.pl.edu.wszib.transaction.Transaction;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.Scanner;
+
 
 public class App {
 
@@ -26,7 +26,6 @@ public class App {
 
             while (!findNonce.endsWith("00000")) {
                 Transaction transaction = new Transaction(ammount, hash, nonce);
-//                System.out.println(transaction);
                 findNonce = DigestUtils.md5Hex(String.valueOf(transaction));
                 if (!findNonce.endsWith("00000")) {
                     nonce++;
@@ -34,7 +33,6 @@ public class App {
                     transactions.add(transaction);
                     hash = findNonce;
                 }
-//                System.out.println(findNonce);
                 }
             }
         System.out.println("                                             ");
