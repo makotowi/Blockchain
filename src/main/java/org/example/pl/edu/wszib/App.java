@@ -20,6 +20,7 @@ public class App {
 
 
         for (int i = 0; i < 5; i++) {
+
             String findNonce = "";
             int nonce = 0;
             float ammount = rand.nextFloat(1000);
